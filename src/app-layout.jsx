@@ -1,21 +1,29 @@
-import { Link } from "react-router";
+import { useState, useEffect } from "react";
 
 export function AppLayout({ children = null }) {
+    const [isDark, setIsDark] = useState(() => {
+        return localStorage.getItem("theme") === "dark";
+    });
+
+    useEffect(() => {
+        localStorage.setItem("theme", isDark ? "dark" : "light");
+    }, [isDark]);
+
     return (
-        <div>
-            <header>
-                <h1>PI5 Front End</h1>
-            </header>
-            <nav styles={{ gap: "1em", display: "flex", flexDirection: "row" }}> 
-                <Link to="/">Home</Link>
-                <Link to="/watch">Watch</Link>
-            </nav>
-            <hr />
-            <main>{children}</main>
-            <hr />
-            <footer>
-                <p>&copy; 2026 PI5</p>
-            </footer>
+        <div
+            className={isDark ? "dark-mode" : ""}
+            style={{
+                minHeight: "100vh",
+                display: "flex",
+                flexDirection: "column",
+                transition: "background-color 0.3s ease, color 0.3s ease"
+            }}
+        >
+
+            <main style={{ flex: 1 }}>
+                {children}
+            </main>
+
         </div>
     );
 }

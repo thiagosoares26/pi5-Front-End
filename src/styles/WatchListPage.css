@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800;900&display=swap');
+@keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.3} }
+
+.wl-btn-secondary:hover:not(:disabled) {
+    border-color: rgba(255,255,255,0.3) !important;
+    color: #e8eaf0 !important;
+}
+
+.wl-btn-primary:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 28px rgba(0,114,255,0.5) !important;
+}
+
+.wl-select:focus {
+    border-color: rgba(0,210,255,0.4) !important;
+    box-shadow: 0 0 0 3px rgba(0,210,255,0.1);
+}
+
+.wl-select option { background: #111315; }
+
+.page {
+    background: #08090d;
+    min-height: 100vh;
+    font-family: 'Syne', sans-serif;
+    color: #fff;
+    padding: 60px 20px 80px;
+}
+
+.inner {
+    max-width: 760px;
+    margin: 0 auto;
+}
+ 
+ /* ── Header ── */
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(0, 210, 255, 0.08);
+    border: 1px solid rgba(0, 210, 255, 0.2);
+    border-radius: 50px;
+    padding: 5px 14px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    color: #00d2ff;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+}
+
+.dot {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: #00d2ff;
+    box-shadow: 0 0 8px #00d2ff;
+    animation: pulse 2s infinite;
+}
+.title {
+    font-size: 2.4rem;
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    margin: 0 0 10px;
+    background: linear-gradient(90deg, #fff 40%, #7a8399);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+    font-size: 0.95rem;
+    color: #5a6280;
+    margin-bottom: 40px;
+}
+ 
+ /* ── Controls ── */
+.controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 20px 24px;
+    background: rgba(255, 255, 255, 0.025);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 12px;
+    margin-bottom: 28px;
+}
+
+.playerBlock {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.label {
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    color: #5a6280;
+    text-transform: uppercase;
+}
+
+.select {
+    padding: 10px 16px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #e8eaf0;
+    font-size: 0.9rem;
+    cursor: pointer;
+    outline: none;
+    min-width: 220px;
+    font-family: 'Syne', sans-serif;
+    transition: border-color 0.25s;
+}
+
+.btnRow {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.btnSecondary {
+    padding: 10px 22px;
+    background: transparent;
+    border: 1.5px solid rgba(255, 255, 255, 0.12);
+    border-radius: 8px;
+    color: #7a8399;
+    font-size: 0.82rem;
+    font-weight: 800;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.25s;
+    font-family: 'Syne', sans-serif;
+}
+
+.btnPrimary {
+    padding: 10px 26px;
+    background: linear-gradient(90deg, #00d2ff, #0072ff);
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 0.82rem;
+    font-weight: 800;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow: 0 4px 20px rgba(0,114,255,0.35);
+    transition: all 0.25s;
+    font-family: 'Syne', sans-serif;
+}
+ 
+ /* ── List ── */
+.listHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.listTitle {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    color: #3a4060;
+    text-transform: uppercase;
+}
+
+.listCount {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #3a4060;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+ 
+ /* ── States ── */
+.stateBox {
+    padding: 50px 20px;
+    text-align: center;
+    color: #3a4060;
+    font-size: 0.9rem;
+    letter-spacing: 0.04em;
+}
+
+.errorText {
+    color: #ff4757;
+    font-size: 0.88rem;
+    padding: 14px 20px;
+    background: rgba(255, 71, 87, 0.07);
+    border: 1px solid rgba(255, 71, 87, 0.2);
+    border-radius: 8px;
+    margin-bottom: 20px;
+}

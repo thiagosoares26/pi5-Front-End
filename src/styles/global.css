@@ -1,0 +1,106 @@
+/* RESET GLOBAL & BOX MODEL */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    /* Garante que padding/border não aumentem o tamanho fixo */
+}
+
+/* =========================================
+   DEFINIÇÃO DO TEMA (CORES)
+   ========================================= */
+
+/* MODO CLARO (Default / Padrão) */
+:root {
+    /* Cores para o seletor de jogadores */
+    --player-select-bg: #ffffff;        /* Fundo da caixa */
+    --player-select-border: #e2e8f0;    /* Borda da caixa */
+    --player-select-text: #1e293b;      /* Cor do selo "Jogar como:" */
+    --player-dropdown-bg: #f8fafc;      /* Fundo do dropdown */
+    --player-dropdown-text: #0f172a;    /* Cor do texto dentro do dropdown */
+    --player-dropdown-border: #cbd5e1;  /* Borda do dropdown */
+    --primary-color: #007bff;           /* Cor de foco (azul padrão) */
+}
+
+/* MODO ESCURO (Ativado pela classe .dark-mode) */
+.dark-mode {
+    /* Cores para o seletor de jogadores (Modo Escuro) */
+    --player-select-bg: #1e2126;        /* Mesmo fundo dos cards escursos */
+    --player-select-border: #2d3139;    /* Borda escura */
+    --player-select-text: #e2e8f0;      /* Texto claro */
+    --player-dropdown-bg: #111315;      /* Fundo input escuro */
+    --player-dropdown-text: #ffffff;    /* Texto branco */
+    --player-dropdown-border: #3a3f4a;  /* Borda dropdown escura */
+    --primary-color: #00d2ff;           /* Cor de foco neon */
+}
+
+html,
+body,
+#root {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+    /* Evita rolagem lateral acidental no mobile */
+}
+
+/* DARK MODE BASE */
+.dark-mode {
+    background-color: #121212;
+    color: #f1f2f6;
+}
+
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode h3,
+.dark-mode p {
+    color: #f1f2f6 !important;
+}
+
+/* UTILITÁRIOS GERAIS */
+.status-container {
+    margin: 20px 0;
+    padding: 0 15px;
+    /* Espaço nas laterais para não grudar na borda do celular */
+    text-align: center;
+}
+
+.error-text {
+    color: red;
+    word-wrap: break-word;
+    /* Evita que mensagens de erro longas quebrem o layout */
+}
+
+/* =========================================
+   RESPONSIVIDADE GLOBAL (TIPOGRAFIA)
+   ========================================= */
+
+@media (max-width: 768px) {
+
+    /* Ajusta o tamanho base da fonte para telas menores */
+    html {
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+
+    /* Ajustes extras para celulares pequenos */
+    .status-container {
+        margin: 10px 0;
+    }
+}
