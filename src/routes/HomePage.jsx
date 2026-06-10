@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import "../styles/homePage.css";
+import "../styles/HomePage.css";
  
 const BOARD = [
   ["🔴","","","🔵",""],
@@ -49,6 +49,9 @@ export function HomePage() {
             <div className="heroButtons">
               <Link to="/watch" className="btnPrimary">
                 Assistir à Batalha
+              </Link>
+              <Link to="/registro" className="btnRegister">
+                Registrar Jogador
               </Link>
               <Link to="/battle" className="btnBattle">
                 ⚔ Batalhar

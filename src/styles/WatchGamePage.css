@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800;900&display=swap');
+
+@keyframes wg-pulse { 0%,100%{opacity:1} 50%{opacity:0.3} }
+@keyframes wg-glow-in { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+
+/* ── RESET MÍNIMO ── */
+*, *::before, *::after { box-sizing: border-box; }
+
+/* ── PÁGINA ── */
+.wg-page {
+    background: #08090d;
+    min-height: 100vh;
+    font-family: 'Syne', sans-serif;
+    color: #e8eaf0;
+    padding: 40px 20px 80px;
+}
+
+/* ── INNER ── */
+.wg-inner {
+    max-width: 860px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+/* ── HEADER ── */
+.wg-title {
+    font-size: clamp(1.6rem, 4vw, 2.4rem);
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    text-align: center;
+    margin: 0;
+    color: #e8eaf0;
+    line-height: 1.1;
+    word-break: break-word;
+}
+
+.wg-title-id {
+    font-size: 0.65em;
+    font-weight: 800;
+    color: #3a4060;
+    letter-spacing: 0.02em;
+}
+
+.wg-back-link {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #00d2ff;
+    text-decoration: none;
+    letter-spacing: 0.04em;
+    transition: color 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.wg-back-link:hover {
+    color: #7dd3fc;
+}
+
+/* ── STATUS BOX (loading/error) ── */
+.wg-status-box {
+    padding: 40px 20px;
+    text-align: center;
+    color: #3a4060;
+    font-size: 0.9rem;
+    letter-spacing: 0.04em;
+    width: 100%;
+}
+
+.wg-error-box {
+    color: #ff4757;
+    font-size: 0.88rem;
+    padding: 14px 20px;
+    background: rgba(255,71,87,0.07);
+    border: 1px solid rgba(255,71,87,0.2);
+    border-radius: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+/* ── COMPACT PANEL ── */
+.wg-panel {
+    width: 100%;
+    background: rgba(255,255,255,0.025);
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 16px;
+    padding: 16px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+}
+
+/* ── INFO ROW (pills) ── */
+.wg-info-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 8px;
+    width: 100%;
+}
+
+.wg-pill {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 10px;
+    padding: 10px 12px;
+    min-height: 52px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    transition: border-color 0.25s;
+}
+
+.wg-pill:hover {
+    border-color: rgba(255,255,255,0.12);
+}
+
+.wg-pill-label {
+    font-size: 0.65rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #3a4060;
+    margin-bottom: 4px;
+}
+
+.wg-pill-value {
+    font-size: 0.95rem;
+    font-weight: 900;
+    color: #e8eaf0;
+    line-height: 1.1;
+    overflow-wrap: anywhere;
+}
+
+.wg-pill-value--accent {
+    color: #00d2ff;
+}
+
+.wg-pill-subvalue {
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #3a4060;
+    margin-top: 3px;
+    overflow-wrap: anywhere;
+}
+
+/* ── DIVIDER ── */
+.wg-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.06), transparent);
+    margin: 12px 0;
+}
+
+/* ── WINNER BANNER ── */
+.wg-winner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding: 12px 16px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, rgba(0,210,255,0.1), rgba(178,75,255,0.1));
+    border: 1px solid rgba(0,210,255,0.25);
+    text-align: center;
+    animation: wg-glow-in 0.4s ease;
+}
+
+.wg-winner-label {
+    font-size: 0.7rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #5a6280;
+}
+
+.wg-winner-name {
+    font-size: 1.1rem;
+    font-weight: 900;
+    color: #e8eaf0;
+    overflow-wrap: anywhere;
+}
+
+.wg-winner-trophy {
+    font-size: 1.2rem;
+}
+
+/* ── DEBUG DETAILS ── */
+.wg-debug {
+    margin-top: 8px;
+    color: #3a4060;
+    font-size: 0.78rem;
+}
+
+.wg-debug summary {
+    cursor: pointer;
+    font-weight: 700;
+    color: #3a4060;
+    outline: none;
+    user-select: none;
+    letter-spacing: 0.04em;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+}
+
+.wg-debug summary:hover {
+    color: #5a6280;
+}
+
+.wg-debug-grid {
+    margin-top: 8px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(145px, 1fr));
+    gap: 6px;
+}
+
+.wg-debug-item {
+    background: rgba(0,0,0,0.2);
+    border: 1px solid rgba(255,255,255,0.04);
+    border-radius: 8px;
+    padding: 8px 10px;
+    overflow-wrap: anywhere;
+    color: #5a6280;
+    font-size: 0.76rem;
+    line-height: 1.5;
+}
+
+.wg-debug-item strong {
+    color: #3a4060;
+}
+
+/* ── BOARD OUTER ── */
+.wg-board-outer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* board-container, board-grid, board-cell já vêm do BoardCell —
+   sobrescrevemos apenas tamanho e cores aqui */
+.wg-board-outer .board-container {
+    background: rgba(255,255,255,0.025);
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.5);
+}
+
+.wg-board-outer .board-grid {
+    grid-template-columns: repeat(5, 92px);
+    gap: 10px;
+}
+
+.wg-board-outer .board-cell {
+    width: 92px;
+    height: 92px;
+    border-radius: 10px;
+}
+
+.wg-board-outer .level-text {
+    font-size: 13px;
+    font-weight: 900;
+    font-family: 'Syne', sans-serif;
+}
+
+.wg-board-outer .professor-badge {
+    font-size: 10px;
+    padding: 3px 6px;
+    margin-top: 6px;
+    border-radius: 4px;
+}
+
+/* ── RESPONSIVO ── */
+@media (max-width: 900px) {
+    .wg-board-outer .board-grid { grid-template-columns: repeat(5, 78px); gap: 8px; }
+    .wg-board-outer .board-cell { width: 78px; height: 78px; }
+}
+
+@media (max-width: 560px) {
+    .wg-page { padding: 24px 12px 60px; }
+    .wg-board-outer .board-container { padding: 10px; }
+    .wg-board-outer .board-grid { grid-template-columns: repeat(5, 58px); gap: 6px; }
+    .wg-board-outer .board-cell { width: 58px; height: 58px; }
+    .wg-board-outer .level-text { font-size: 9px; }
+    .wg-board-outer .professor-badge { font-size: 7px; padding: 1px 3px; }
+}

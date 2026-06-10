@@ -1,0 +1,165 @@
+/* =========================================
+   GAME CARD — Dark Neon Theme
+   ========================================= */
+
+@keyframes gc-pulse { 0%,100%{opacity:1} 50%{opacity:0.3} }
+
+.gc-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 20px;
+    background: rgba(255, 255, 255, 0.025);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 12px;
+    transition: border-color 0.25s, transform 0.25s, box-shadow 0.25s;
+    font-family: 'Syne', sans-serif;
+}
+
+.gc-card:hover {
+    border-color: rgba(255, 255, 255, 0.13);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.35);
+}
+
+/* ── PLAYERS ── */
+.gc-players {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex: 1;
+    min-width: 0;
+}
+
+.gc-player {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 0;
+}
+
+.gc-player-name {
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: #e8eaf0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 120px;
+}
+
+/* ── AVATAR ── */
+.gc-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.04);
+    flex-shrink: 0;
+}
+
+.gc-avatar--placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    font-weight: 900;
+    color: #5a6280;
+    background: rgba(255, 255, 255, 0.04);
+    border: 2px solid rgba(255, 255, 255, 0.07);
+}
+
+/* ── VS ── */
+.gc-vs {
+    font-size: 0.65rem;
+    font-weight: 900;
+    letter-spacing: 0.1em;
+    color: #3a4060;
+    flex-shrink: 0;
+}
+
+/* ── META (status) ── */
+.gc-meta {
+    flex-shrink: 0;
+}
+
+.gc-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    padding: 5px 12px;
+    border-radius: 50px;
+}
+
+.gc-status--finished {
+    background: rgba(0, 210, 255, 0.08);
+    border: 1px solid rgba(0, 210, 255, 0.18);
+    color: #00d2ff;
+}
+
+.gc-status--live {
+    background: rgba(0, 184, 148, 0.08);
+    border: 1px solid rgba(0, 184, 148, 0.2);
+    color: #00b894;
+}
+
+.gc-live-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #00b894;
+    box-shadow: 0 0 6px #00b894;
+    animation: gc-pulse 1.5s infinite;
+    flex-shrink: 0;
+}
+
+/* ── BUTTON ── */
+.gc-btn {
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 9px 22px;
+    background: linear-gradient(90deg, #00d2ff, #0072ff);
+    border-radius: 8px;
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Syne', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 900;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    box-shadow: 0 4px 16px rgba(0, 114, 255, 0.3);
+    transition: all 0.25s ease;
+}
+
+.gc-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 114, 255, 0.5);
+    filter: brightness(1.1);
+}
+
+.gc-btn:active {
+    transform: scale(0.97);
+}
+
+/* ── RESPONSIVO ── */
+@media (max-width: 600px) {
+    .gc-card {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .gc-player-name {
+        max-width: 80px;
+    }
+
+    .gc-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}

@@ -1,8 +1,8 @@
 import { api } from "../services/api";
 
 export const PLAYERS = [
-    { id: 21, name: "PalermaBot (Principal)", token: import.meta.env.VITE_API_TOKEN },
-    { id: 78, name: "Eriguei (Teste)", token: import.meta.env.VITE_API_TOKEN_ERIGUEI }
+    { id: 136, name: "Supla", token: "BvztAqTzAqgFjRuiQbGm_XTIxnxUn2aImv_FxuU81hI" },
+    { id: 174, name: "Supla 2.0", token: import.meta.env.VITE_API_TOKEN },
 ];
 
 export function PlayerSelect({ value, onChange, label, variant = "arena" }) {

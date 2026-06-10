@@ -1,0 +1,117 @@
+/* =========================================
+   BOARD CELL — Dark Neon Theme
+   ========================================= */
+
+/* ── BASE CELL ── */
+.board-cell {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    width: 92px;
+    height: 92px;
+    box-sizing: border-box;
+    position: relative;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: default;
+
+    /* Célula vazia (Lvl 0) */
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.board-cell:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* ── NÍVEL 0 (vazio) ── */
+.board-cell.level-0 .level-text {
+    color: rgba(255, 255, 255, 0.15);
+}
+
+/* ── NÍVEIS COM DONO — Equipe Turing (azul) ──
+   Detectado pela presença de professor team-1 no render,
+   mas o nível define a intensidade da cor */
+
+/* Nível 1 — azul claro */
+.board-cell.level-1 {
+    background: rgba(74, 144, 226, 0.25);
+    border: 1px solid rgba(74, 144, 226, 0.4);
+    box-shadow: inset 0 0 12px rgba(74, 144, 226, 0.15);
+}
+
+/* Nível 2 — azul médio */
+.board-cell.level-2 {
+    background: rgba(9, 132, 227, 0.55);
+    border: 1px solid rgba(9, 132, 227, 0.7);
+    box-shadow: inset 0 0 16px rgba(9, 132, 227, 0.3), 0 0 12px rgba(9, 132, 227, 0.2);
+}
+
+/* Nível 3 — dourado (máximo) */
+.board-cell.level-3 {
+    background: rgba(253, 203, 110, 0.7);
+    border: 1px solid rgba(253, 203, 110, 0.85);
+    box-shadow: inset 0 0 20px rgba(253, 203, 110, 0.3), 0 0 16px rgba(253, 203, 110, 0.25);
+}
+
+/* ── TEXTO DO NÍVEL ── */
+.level-text {
+    font-family: 'Syne', sans-serif;
+    font-size: 13px;
+    font-weight: 900;
+    letter-spacing: 0.02em;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1;
+}
+
+.board-cell.level-0 .level-text {
+    color: rgba(255, 255, 255, 0.12);
+    font-weight: 700;
+}
+
+.board-cell.level-3 .level-text {
+    color: rgba(30, 20, 0, 0.85);
+}
+
+/* ── PROFESSOR BADGE ── */
+.professor-badge {
+    font-family: 'Syne', sans-serif;
+    font-size: 9px;
+    font-weight: 900;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 3px 7px;
+    border-radius: 5px;
+    margin-top: 6px;
+    line-height: 1;
+    white-space: nowrap;
+}
+
+/* Equipe 1 (CLARO, REY) — verde neon */
+.professor-badge.team-1 {
+    background: rgba(0, 184, 148, 0.85);
+    color: #fff;
+    box-shadow: 0 0 8px rgba(0, 184, 148, 0.5);
+}
+
+/* Equipe 2 (outros) — rosa/vermelho */
+.professor-badge.team-2 {
+    background: rgba(255, 71, 87, 0.85);
+    color: #fff;
+    box-shadow: 0 0 8px rgba(255, 71, 87, 0.5);
+}
+
+/* Nível 3 dourado — badge com sombra escura */
+.board-cell.level-3 .professor-badge.team-1 {
+    box-shadow: 0 0 8px rgba(0, 184, 148, 0.6), 0 1px 3px rgba(0,0,0,0.3);
+}
+
+.board-cell.level-3 .professor-badge.team-2 {
+    box-shadow: 0 0 8px rgba(255, 71, 87, 0.6), 0 1px 3px rgba(0,0,0,0.3);
+}
+
+/* ── RESPONSIVO (herdado do WatchGamePage.css) ──
+   Os tamanhos são sobrescritos por .wg-board-outer
+   nas media queries do WatchGamePage.css           */

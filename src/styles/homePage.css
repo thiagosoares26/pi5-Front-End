@@ -22,6 +22,10 @@
     transform: translateY(-3px);
     box-shadow: 0 8px 32px rgba(255,71,87,0.35);
 }
+.btnRegister:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 32px rgba(0,184,148,0.55) !important;
+}
 .feature-card-hover:hover {
     border-color: rgba(255,255,255,0.15) !important;
     transform: translateY(-4px);
@@ -172,6 +176,21 @@ body { margin: 0; }
     letter-spacing: 0.06em;
     text-transform: uppercase;
     box-shadow: 0 4px 24px rgba(0,114,255,0.4);
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.btnRegister {
+    padding: 14px 36px;
+    background: linear-gradient(90deg, #00b894, #035e4b);
+    border-radius: 8px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 0.95rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    box-shadow: 0 4px 24px rgba(0,184,148,0.4);
     transition: all 0.3s ease;
     display: inline-block;
 }
