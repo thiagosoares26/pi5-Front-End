@@ -112,7 +112,7 @@ export function WatchListPage() {
                             {loading ? "Buscando..." : "↺ Atualizar"}
                         </button>
                         <button onClick={createNewGame} className="wl-btn-primary" disabled={creating}>
-                            {creating ? "Iniciando..." : "+ Nova Partida"}
+                            {creating ? "Iniciando..." : "VS Randon Bot"}
                         </button>
                     </div>
                 </div>
