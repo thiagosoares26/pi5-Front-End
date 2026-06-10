@@ -71,8 +71,8 @@ export function WatchListPage() {
                             Partidas ao vivo
                         </div>
                     </div>
-                    <h1 className="wl-title">Selecione a Partida</h1>
-                    <p className="wl-subtitle">Lista das últimas partidas geradas no servidor.</p>
+                    <h1 className="wl-title">Selecione uma Partida</h1>
+                    <p className="wl-subtitle">Lista das últimas partidas listadas.</p>
                 </div>
 
                 {/* Controls card */}
@@ -80,7 +80,7 @@ export function WatchListPage() {
 
                     {/* Campo 1: Jogador */}
                     <div className="wl-field">
-                        <span className="wl-label">1. Jogar como</span>
+                        <span className="wl-label">1. Escolha seu jogador</span>
                         <PlayerSelect
                             value={selectedPlayerId}
                             onChange={setSelectedPlayerId}

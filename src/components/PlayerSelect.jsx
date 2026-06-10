@@ -25,7 +25,7 @@ export function PlayerSelect({ value, onChange, label, variant = "arena" }) {
             <div className="player-select-container">
                 <label className="player-select-label">{label}</label>
                 <select className="player-select-dropdown" value={value} onChange={handleChange}>
-                    <option value="" disabled>-- Selecione o Jogador --</option>
+                    <option value="" disabled>Selecione o Jogador</option>
                     {PLAYERS.map(player => (
                         <option key={player.id} value={player.id}>{player.name}</option>
                     ))}
@@ -41,7 +41,7 @@ export function PlayerSelect({ value, onChange, label, variant = "arena" }) {
                 {label}
             </label>
             <select className="player-select-dropdown" value={value} onChange={handleChange} style={{ width: "100%" }}>
-                <option value="" disabled>-- Selecione o Jogador --</option>
+                <option value="" disabled>Selecione o Jogador</option>
                 {PLAYERS.map(player => (
                     <option key={player.id} value={player.id}>{player.name}</option>
                 ))}

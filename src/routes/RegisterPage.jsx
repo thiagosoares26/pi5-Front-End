@@ -81,10 +81,10 @@ export function RegisterPage() {
               Registro de Bot
             </div>
           </div>
-          <h1 style={S.title}>Alistamento de IA</h1>
+          <h1 style={S.title}>Cadastro do jogador</h1>
           <p style={S.subtitle}>
-            Registre os dados do seu bot para conectá-lo<br />
-            ao servidor central do torneio.
+            Cadastre seus dados para conectá-lo<br />
+            ao server.
           </p>
 
           {/* Form card */}

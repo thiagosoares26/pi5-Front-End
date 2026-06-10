@@ -431,10 +431,10 @@ export function BattlePage() {
               Arena de Batalha
           </div>
         </div>
-        <h1 className="bt-title">⚔️ Entre em Combate</h1>
+        <h1 className="bt-title">Entre em uma partida</h1>
         <p className="bt-subtitle">
-          Prepare seu bot para o torneio.<br />
-          Insira o ID do adversário e inicie o combate.
+          Prepare-se para jogar.<br />
+          Insira o ID adversário para iniciar a partida.
         </p>
  
         {/* Form card */}
@@ -486,7 +486,7 @@ export function BattlePage() {
             disabled={creating}
             className="bt-btn"
           >
-            {creating ? "⏳ Gerando Arena..." : "⚔️ Entrar em Combate"}
+            {creating ? "⏳ Carregando partida..." : "Entrar"}
           </button>
  
         </div>

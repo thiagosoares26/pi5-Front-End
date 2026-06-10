@@ -10,9 +10,9 @@ const BOARD = [
 ];
  
 const features = [
-  { icon: "🌐", title: "A API Web", desc: "Integração de backend que recebe e valida as jogadas do tabuleiro em tempo real.", accent: "featureAccentApi" },
-  { icon: "🧠", title: "IA Heurística", desc: "Decisões autônomas tomadas por algoritmos baseados em pontuação e bloqueios estratégicos.", accent: "featureAccentIa" },
-  { icon: "⚛️", title: "O Tabuleiro React", desc: "Interface frontend dinâmica que renderiza os níveis, os professores e o histórico de turnos.", accent: "featureAccentReact" },
+  { icon: "🌐", title: "Front-end", desc: "Integração com a API que recebe os dados e valida as jogadas do tabuleiro em tempo real.", accent: "featureAccentApi" },
+  { icon: "🧠", title: "Bot Inteligente", desc: "Decisões inteligentes tomadas pelo algoritmo que considera a melhor jogada no momento", accent: "featureAccentIa" },
+  { icon: "⚛️", title: "Interface Dinâmica", desc: "Aplicação wev dinâmica que renderiza o tabuleiro com as jogadas no momento e seus jogadores", accent: "featureAccentReact" },
 ];
  
 export function HomePage() {
@@ -27,7 +27,7 @@ export function HomePage() {
             <li><a href="#features" className="nav-link">Funcionalidades</a></li>
             <li><a href="#team" className="nav-link">Equipe</a></li>
           </ul>
-          <Link to="/battle" className="nav-cta">Batalhar →</Link>
+          <Link to="/battle" className="nav-cta">Jogar →</Link>
         </nav>
  
         {/* ── HERO ── */}
@@ -48,13 +48,13 @@ export function HomePage() {
             </p>
             <div className="heroButtons">
               <Link to="/watch" className="btnPrimary">
-                Assistir à Batalha
+                Assistir à Partida
               </Link>
               <Link to="/registro" className="btnRegister">
                 Registrar Jogador
               </Link>
               <Link to="/battle" className="btnBattle">
-                ⚔ Batalhar
+                ⚔ Jogar
               </Link>
             </div>
           </div>
