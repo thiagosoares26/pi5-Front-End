@@ -1,7 +1,7 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { App } from "@/app";
-import { BattlePage } from './routes/BattlePage';
+import { GamePage } from './routes/GamePage';
 import { GameContextProvider } from './feature/game/context/game-context';
 
 const root = document.querySelector("#root");

@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { api } from "../services/api";
 import { PlayerSelect, PLAYERS } from "../components/PlayerSelect";
-import "../styles/BattlePage.css";
+import "../styles/GamePage.css";
  
 function parsePlayerId(value) {
     const text = String(value).trim();
@@ -227,9 +227,6 @@ async function joinOpponent(gameId, opponentPlayerId, opponentTeamSlot) {
         },
     ];
 
-    // Quando o adversario deve ir para o slot 2, algumas APIs aceitam só player_id.
-    // Quando o adversario deve ir para o slot 1, não usamos fallback sem slot,
-    // porque isso poderia mascarar o bug de lado invertido.
     if (Number(opponentTeamSlot) === 2) {
         joinPayloads.push({ player_id: opponentPlayerId });
     }
@@ -248,9 +245,6 @@ async function startGameIfPossible(gameId, playerId) {
         return await postTryingPayloads(`/games/${gameId}/start`, startPayloads);
     } catch (err) {
         const detail = getErrorDetail(err).toLowerCase();
-
-        // Algumas APIs ja iniciam automaticamente depois do join.
-        // Nesse caso, nao bloqueamos a navegacao.
         if (
             err?.status === 400 &&
             (
@@ -303,7 +297,7 @@ function validateSlotsOrThrow(currentGame, myPlayerId, opponentPlayerId, myTeamS
     }
 }
 
-export function BattlePage() {
+export function GamePage() {
     const navigate = useNavigate();
     const [selectedPlayerId, setSelectedPlayerId] = useState("");
     const [opponentId, setOpponentId] = useState("");

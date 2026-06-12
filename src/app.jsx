@@ -7,7 +7,7 @@ import { useState } from "react";
 import { HomePage } from "@/routes/HomePage";
 import { WatchListPage } from "@/routes/WatchListPage";
 import { WatchGamePage } from "@/routes/WatchGamePage";
-import { BattlePage } from "@/routes/BattlePage";
+import { GamePage } from "@/routes/GamePage";
 import { RegisterPage } from "@/routes/RegisterPage";
 
 export function App() {
@@ -20,7 +20,7 @@ export function App() {
 
                     <Route path="/registro" element={<RegisterPage />} />
                     
-                    <Route path="/battle" element={<BattlePage />} />
+                    <Route path="/GamePage" element={<GamePage />} />
                 </Routes>
         </BrowserRouter>
     );

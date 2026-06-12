@@ -27,7 +27,7 @@ export function HomePage() {
             <li><a href="#features" className="nav-link">Funcionalidades</a></li>
             <li><a href="#team" className="nav-link">Equipe</a></li>
           </ul>
-          <Link to="/battle" className="nav-cta">Jogar →</Link>
+          <Link to="/GamePage" className="nav-cta">Jogar →</Link>
         </nav>
  
         {/* ── HERO ── */}
@@ -53,7 +53,7 @@ export function HomePage() {
               <Link to="/registro" className="btnRegister">
                 Registrar Jogador
               </Link>
-              <Link to="/battle" className="btnBattle">
+              <Link to="/GamePage" className="btnBattle">
                 ⚔ Jogar
               </Link>
             </div>
